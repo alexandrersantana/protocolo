@@ -33,8 +33,7 @@ export default function TabTwoScreen() {
 
   return (
     <View style={styles.container}>
-    <View style={styles.container}>
-      <Text style={styles.title}>Relatórios</Text>
+      {/* <Text style={styles.title}>Relatórios</Text> */}
       <FlatList
         data={relatorios}
         keyExtractor={(item, index) => index.toString()}
@@ -50,7 +49,6 @@ export default function TabTwoScreen() {
           </View>
         )}
       />
-    </View>
 
 
 
@@ -64,7 +62,10 @@ export default function TabTwoScreen() {
 }
 
 const styles = StyleSheet.create({
+
   container: {
+    flexDirection: 'row',
+    margin: 20,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   item: {
-    padding: 10,
+    padding: 20,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
   },
